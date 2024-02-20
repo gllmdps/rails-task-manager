@@ -1,0 +1,13 @@
+<div>
+  <h1 class="display-1 d-flex justify-content-center">My task</h1>
+  <ul>
+    <% @tasks.each do |task|%>
+    <li class="d-flex justify-content-center"><input type="checkbox" <% link_to task.completed, task_path(task) %>><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+    <div class="d-flex justify-content-center">
+    <button class="btn btn-light text-white">
+    <%= link_to "create new task", "/new" %>
+    </button>
+  </div>
+</div>
